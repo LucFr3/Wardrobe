@@ -1,9 +1,5 @@
 name: Wardrobe
-version: 1.0.3
-author: LucFr
+version: 1.0
+authors: [LucFr, Atog]
 main: me.LucFr.Wardrobe.Wardrobe
 api-version: 1.13
-
-commands:  
-  wardrobe:
-    
