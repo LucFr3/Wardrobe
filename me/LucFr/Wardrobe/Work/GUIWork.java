@@ -310,9 +310,10 @@ public class GUIWork {
 		List<String> ItemOnCursorLore = new ArrayList<>();
 		if (ItemOnCursor != null && ItemOnCursor.getItemMeta() != null)
 			ItemOnCursorLore = ItemOnCursor.getItemMeta().getLore();
+		boolean clickedItemGlass = ClickedItemType.contains("STAINED_GLASS_PANE") || !ClickedItemType.contains("STAINED_GLASS_PANE(15)")
+				|| !ClickedItemType.contains("BLACK_STAINED_GLASS_PANE");
 		if (ClickedSlot >= 0 && ClickedSlot <= 8) {
-			if (ClickedItemType.contains("STAINED_GLASS_PANE") && !ClickedItemType.contains("STAINED_GLASS_PANE(15)")
-					&& !ClickedItemType.contains("BLACK_STAINED_GLASS_PANE")) {
+			if (clickedItemGlass) {
 				if (ItemOnCursor != null && CheckHelmet(p, inv, ClickedSlot, ClickedItem, ItemOnCursor,
 						ItemOnCursorType, ItemOnCursorLore, Title)) {
 					inv.setItem(ClickedSlot, ItemOnCursor);
@@ -361,8 +362,7 @@ public class GUIWork {
 				}
 			}
 		} else if (ClickedSlot >= 9 && ClickedSlot <= 17) {
-			if (ClickedItemType.contains("STAINED_GLASS_PANE") && !ClickedItemType.contains("STAINED_GLASS_PANE(15)")
-					&& !ClickedItemType.contains("BLACK_STAINED_GLASS_PANE")) {
+			if (clickedItemGlass) {
 				if (ItemOnCursor != null) {
 					if (CheckChestplate(p, inv, ClickedSlot, ClickedItem, ItemOnCursor, ItemOnCursorType,
 							ItemOnCursorLore, Title)) {
@@ -414,8 +414,7 @@ public class GUIWork {
 				}
 			}
 		} else if (ClickedSlot >= 18 && ClickedSlot <= 26) {
-			if (ClickedItemType.contains("STAINED_GLASS_PANE") && !ClickedItemType.contains("STAINED_GLASS_PANE(15)")
-					&& !ClickedItemType.contains("BLACK_STAINED_GLASS_PANE")) {
+			if (clickedItemGlass) {
 				if (ItemOnCursor != null) {
 					if (CheckLeggings(p, inv, ClickedSlot, ClickedItem, ItemOnCursor, ItemOnCursorType,
 							ItemOnCursorLore, Title)) {
@@ -467,8 +466,7 @@ public class GUIWork {
 				}
 			}
 		} else if (ClickedSlot >= 27 && ClickedSlot <= 35) {
-			if (ClickedItemType.contains("STAINED_GLASS_PANE") && !ClickedItemType.contains("STAINED_GLASS_PANE(15)")
-					&& !ClickedItemType.contains("BLACK_STAINED_GLASS_PANE")) {
+			if (clickedItemGlass) {
 				if (ItemOnCursor != null) {
 					if (CheckBoots(p, inv, ClickedSlot, ClickedItem, ItemOnCursor, ItemOnCursorType, ItemOnCursorLore,
 							Title)) {
